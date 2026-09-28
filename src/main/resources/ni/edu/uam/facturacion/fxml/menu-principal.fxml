@@ -40,7 +40,7 @@
             <children>
                 <VBox alignment="CENTER" spacing="6.0">
                     <children>
-                        <Label styleClass="section-heading" text="Panel de Gestión Comercial" />
+                        <Label styleClass="section-heading" text="Menu Principal" />
                         <Label styleClass="section-description" text="Seleccione el módulo que desea operar" />
                     </children>
                 </VBox>
@@ -52,9 +52,9 @@
                                 <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
                             </padding>
                             <children>
-                                <Label styleClass="module-tag" text="ESTRUCTURA" />
-                                <Label styleClass="module-title" text="Gestión de Categorías" />
-                                <Label styleClass="module-description" text="Organice clasificaciones de productos, departamentos y líneas de venta activas." wrapText="true" />
+                                <Label styleClass="module-tag" text="OPERACIONES DE CATEGORIAS" />
+                                <Label styleClass="module-title" text="Gestion de Categorias" />
+                                <Label styleClass="module-description" text="Agregue, elimine o edite categorias para los productos." wrapText="true" />
                                 <Region VBox.vgrow="ALWAYS" />
                                 <Button maxWidth="1.1797693134862315E308" onAction="#abrirCategorias" styleClass="btn-module-action" text="Abrir Módulo →" />
                             </children>
@@ -67,7 +67,7 @@
                             <children>
                                 <Label styleClass="module-tag" text="CATÁLOGO" />
                                 <Label styleClass="module-title" text="Gestión de Productos" />
-                                <Label styleClass="module-description" text="Administre stock en bodega, precios unitarios, códigos de barras y altas comerciales." wrapText="true" />
+                                <Label styleClass="module-description" text="Administre los productos y agregue categorias previamente creadas." wrapText="true" />
                                 <Region VBox.vgrow="ALWAYS" />
                                 <Button maxWidth="1.1797693134862315E308" onAction="#abrirProductos" styleClass="btn-module-action" text="Abrir Módulo →" />
                             </children>
@@ -77,6 +77,17 @@
             </children>
         </VBox>
     </center>
+
+    <bottom>
+        <HBox alignment="CENTER_LEFT" styleClass="footer-bar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="12.0" left="32.0" right="32.0" top="12.0" />
+            </padding>
+            <children>
+                <Region HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+    </bottom>
    <stylesheets>
       <URL value="@estilos_menu.css" />
       <URL value="@../styles/menuPrincipal-style.css" />

@@ -1,0 +1,215 @@
+.root-pane {
+    -fx-background-color: #f1f5f9;
+    -fx-font-family: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.header-card {
+    -fx-padding: 0 0 10 0;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.titulo-vista {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+.subtitulo-vista {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+}
+
+.formulario-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(15, 23, 42, 0.04), 8, 0, 0, 2);
+}
+
+.campo-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334155;
+}
+
+.campo-texto {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1e293b;
+}
+
+.campo-texto:focused {
+    -fx-border-color: #2563eb;
+    -fx-background-color: #ffffff;
+}
+
+.campo-combo {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 2 6;
+    -fx-font-size: 13px;
+}
+
+.campo-combo:focused {
+    -fx-border-color: #2563eb;
+    -fx-background-color: #ffffff;
+}
+
+.check-custom {
+    -fx-font-size: 13px;
+    -fx-text-fill: #334155;
+    -fx-cursor: hand;
+}
+
+.toolbar-acciones {
+    -fx-padding: 12 0 0 0;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 1 0 0 0;
+}
+
+.btn-primary {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 8 18;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    -fx-background-color: #0f172a;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 8 18;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #1e293b;
+}
+
+.btn-light {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #334155;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 8 16;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-light:hover {
+    -fx-background-color: #cbd5e1;
+}
+
+.btn-danger {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 8 16;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #dc2626;
+}
+
+.btn-back {
+    -fx-background-color: transparent;
+    -fx-border-color: #94a3b8;
+    -fx-border-radius: 6;
+    -fx-text-fill: #475569;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 7 16;
+    -fx-cursor: hand;
+}
+
+.btn-back:hover {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #0f172a;
+}
+
+.tabla-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(three-pass-box, rgba(15, 23, 42, 0.04), 8, 0, 0, 2);
+}
+
+.tabla-titulo {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+    -fx-padding: 0 0 6 2;
+}
+
+.tabla-financiera {
+    -fx-background-color: transparent;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.tabla-financiera .column-header-background {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.tabla-financiera .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 38px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 1 1 0;
+}
+
+.tabla-financiera .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #475569;
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 0 12;
+}
+
+.tabla-financiera .table-row-cell {
+    -fx-cell-size: 38px;
+    -fx-border-color: transparent transparent #f1f5f9 transparent;
+}
+
+.tabla-financiera .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.tabla-financiera .table-row-cell:even {
+    -fx-background-color: #f8fafc;
+}
+
+.tabla-financiera .table-row-cell:selected {
+    -fx-background-color: #2563eb;
+    -fx-table-cell-border-color: transparent;
+}
+
+.tabla-financiera .table-row-cell:selected .text {
+    -fx-fill: #ffffff;
+}

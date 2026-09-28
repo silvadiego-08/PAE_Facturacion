@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="560.0" prefWidth="680.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.facturacion.controller.LoginController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+    <children>
+        <VBox maxWidth="400.0" spacing="22.0" styleClass="login-card">
+            <padding>
+                <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+            </padding>
+            <children>
+                <VBox spacing="6.0">
+                    <children>
+                        <Label styleClass="system-tag" text="SISTEMA DE FACTURACION" />
+                        <Label styleClass="login-title" text="Inicio de Sesion" />
+                        <Label styleClass="login-subtitle" text="Ingrese sus credenciales para continuar." />
+                    </children>
+                </VBox>
+
+                <VBox spacing="16.0">
+                    <children>
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label styleClass="field-label" text="Usuario" />
+                                <TextField fx:id="txtUsuario" promptText="Identificador o terminal" styleClass="input-field" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="6.0">
+                            <children>
+                                <Label styleClass="field-label" text="Contraseña" />
+                                <PasswordField fx:id="txtPassword" promptText="••••••••••••" styleClass="input-field" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+                <VBox spacing="10.0">
+                    <children>
+                        <Button defaultButton="true" maxWidth="1.1797693134862315E308" onAction="#iniciarSesion" styleClass="btn-primary" text="Iniciar Sesión" />
+                        <Button cancelButton="true" maxWidth="1.1797693134862315E308" onAction="#salir" styleClass="btn-secondary" text="Cancelar" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="6.0" />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+   <stylesheets>
+      <URL value="@estilos_login.css" />
+      <URL value="@../styles/login-style.css" />
+   </stylesheets>
+</VBox>

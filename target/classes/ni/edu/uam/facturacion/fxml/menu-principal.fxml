@@ -1,28 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.VBox?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ni.edu.uam.facturacion.controller.MenuPrincipalController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<BorderPane prefHeight="580.0" prefWidth="820.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.facturacion.controller.MenuPrincipalController">
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="navbar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="16.0" left="32.0" right="32.0" top="16.0" />
+            </padding>
+            <children>
+                <VBox spacing="2.0">
+                    <children>
+                        <Label styleClass="brand-title" text="Sistema de Facturacion" />
+                        <Label styleClass="brand-subtitle" text="PAE | Proyecto de JavaFX" />
+                    </children>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS" />
+                <HBox alignment="CENTER" spacing="8.0" styleClass="status-badge">
+                    <padding>
+                        <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                    </padding>
+                    <children>
+                        <Label styleClass="status-dot" text="●" />
+                        <Label styleClass="status-text" text="Base de datos" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
 
-    <ImageView fitHeight="200.0" preserveRatio="true" smooth="true">
-        <image>
-            <Image url="@../images/logo.png"/>
-        </image>
-    </ImageView>
-    <Label text="Proyecto de JavaFX - Programación de Aplicaciones de Escritorio"
-           style="-fx-font-size: 13px; -fx-text-fill: #555555;"/>
+    <center>
+        <VBox alignment="CENTER" spacing="28.0" styleClass="main-content" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="30.0" left="40.0" right="40.0" top="20.0" />
+            </padding>
+            <children>
+                <VBox alignment="CENTER" spacing="6.0">
+                    <children>
+                        <Label styleClass="section-heading" text="Menu Principal" />
+                        <Label styleClass="section-description" text="Seleccione el módulo que desea operar" />
+                    </children>
+                </VBox>
 
-    <Label text="Sistema de Facturación"/>
-    <Button text="Categorías" onAction="#abrirCategorias"/>
-    <Button text="Productos" onAction="#abrirProductos"/>
-</VBox>
+                <HBox alignment="CENTER" spacing="26.0">
+                    <children>
+                        <VBox prefHeight="220.0" prefWidth="300.0" spacing="12.0" styleClass="module-card">
+                            <padding>
+                                <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                            </padding>
+                            <children>
+                                <Label styleClass="module-tag" text="OPERACIONES DE CATEGORIAS" />
+                                <Label styleClass="module-title" text="Gestion de Categorias" />
+                                <Label styleClass="module-description" text="Agregue, elimine o edite categorias para los productos." wrapText="true" />
+                                <Region VBox.vgrow="ALWAYS" />
+                                <Button maxWidth="1.1797693134862315E308" onAction="#abrirCategorias" styleClass="btn-module-action" text="Abrir Módulo →" />
+                            </children>
+                        </VBox>
+
+                        <VBox prefHeight="220.0" prefWidth="300.0" spacing="12.0" styleClass="module-card">
+                            <padding>
+                                <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                            </padding>
+                            <children>
+                                <Label styleClass="module-tag" text="CATÁLOGO" />
+                                <Label styleClass="module-title" text="Gestión de Productos" />
+                                <Label styleClass="module-description" text="Administre los productos y agregue categorias previamente creadas." wrapText="true" />
+                                <Region VBox.vgrow="ALWAYS" />
+                                <Button maxWidth="1.1797693134862315E308" onAction="#abrirProductos" styleClass="btn-module-action" text="Abrir Módulo →" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_LEFT" styleClass="footer-bar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="12.0" left="32.0" right="32.0" top="12.0" />
+            </padding>
+            <children>
+                <Region HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+    </bottom>
+   <stylesheets>
+      <URL value="@estilos_menu.css" />
+      <URL value="@../styles/menuPrincipal-style.css" />
+   </stylesheets>
+</BorderPane>
