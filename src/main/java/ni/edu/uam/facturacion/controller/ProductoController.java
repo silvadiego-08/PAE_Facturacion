@@ -68,8 +68,11 @@ public class ProductoController {
 
     @FXML
     private TableColumn<Producto, Number> colExistencia;
+    @FXML
+    private TextField txtBuscar;
 
     @FXML
+
     private TableColumn<Producto, Boolean> colActivo;
 
     private final ProductoDAO productoDAO = new ProductoDAO();
@@ -175,6 +178,28 @@ public class ProductoController {
         txtRutaImagen.clear();
         chkActivo.setSelected(true);
         tablaProductos.getSelectionModel().clearSelection();
+    }
+
+    @FXML
+    private void buscar() {
+        String texto = txtBuscar.getText().trim();
+
+        if (texto.isEmpty()) {
+            cargarProductos();
+            return;
+        }
+
+        try {
+            productos.setAll(productoDAO.buscar(texto));
+        } catch (SQLException e) {
+            mostrarMensaje(Alert.AlertType.ERROR, "No se pudo realizar la búsqueda: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void verTodos() {
+        txtBuscar.clear();
+        cargarProductos();
     }
 
     @FXML

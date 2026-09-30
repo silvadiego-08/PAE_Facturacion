@@ -92,6 +92,29 @@ public class ProductoDAO {
         return null;
     }
 
+    public List<Producto> buscar(String texto) throws SQLException {
+
+        String sql = SELECT_BASE + " WHERE p.nombre ILIKE ? OR p.codigo ILIKE ? ORDER BY p.id";
+        String patron = "%" + texto + "%";
+
+        List<Producto> productos = new ArrayList<>();
+
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement ps = connection.prepareStatement(sql)) {
+
+            ps.setString(1, patron);
+            ps.setString(2, patron);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    productos.add(mapear(rs));
+                }
+            }
+        }
+
+        return productos;
+    }
+
     public void actualizar(Producto producto) throws SQLException {
 
         String sql = """

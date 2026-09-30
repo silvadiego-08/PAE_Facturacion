@@ -53,17 +53,30 @@
         </GridPane>
 
         <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="toolbar-acciones">
-            <Button onAction="#guardar" styleClass="btn-primary" text="Guardar">
+            <Button onAction="#guardar" prefHeight="35.0" prefWidth="113.0" styleClass="btn-primary" text="Guardar">
                 <graphic>
-                    <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" smooth="true">
+                    <ImageView fitHeight="20.0" fitWidth="19.0" preserveRatio="true" smooth="true">
                         <image>
                             <Image url="@../icons/agregar.png" />
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-            <Button onAction="#actualizar" styleClass="btn-secondary" text="Actualizar" />
-            <Button onAction="#limpiar" styleClass="btn-light" text="Limpiar" />
+            <Button onAction="#actualizar" styleClass="btn-secondary" text="Actualizar">
+            <graphic>
+               <ImageView fitHeight="17.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../icons/actualizar.png" />
+                  </image></ImageView>
+            </graphic></Button>
+            <Button onAction="#limpiar" styleClass="btn-light" text="Limpiar">
+            <graphic>
+               <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../icons/limpiar.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
             <Button onAction="#eliminar" styleClass="btn-danger" text="Eliminar">
                 <graphic>
                     <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" smooth="true">
@@ -78,8 +91,15 @@
         </HBox>
     </VBox>
 
-    <VBox spacing="8.0" styleClass="tabla-card" VBox.vgrow="ALWAYS">
+    <VBox spacing="12.0" styleClass="tabla-card" VBox.vgrow="ALWAYS">
         <Label styleClass="tabla-titulo" text="Catálogo de Productos Registrados" />
+
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <TextField fx:id="txtBuscar" promptText="Buscar por código o nombre..." styleClass="campo-texto" HBox.hgrow="ALWAYS" />
+            <Button onAction="#buscar" styleClass="btn-primary" text="Buscar" />
+            <Button onAction="#verTodos" styleClass="btn-light" text="Ver todos" />
+        </HBox>
+
         <TableView fx:id="tablaProductos" styleClass="tabla-financiera" VBox.vgrow="ALWAYS">
             <columns>
                 <TableColumn fx:id="colId" prefWidth="60.0" text="ID" />
@@ -95,8 +115,7 @@
             </columnResizePolicy>
         </TableView>
     </VBox>
-   <stylesheets>
-      <URL value="@estilos_producto.css" />
-      <URL value="@../styles/producto-style.css" />
-   </stylesheets>
+    <stylesheets>
+        <URL value="@../styles/producto-style.css" />
+    </stylesheets>
 </VBox>

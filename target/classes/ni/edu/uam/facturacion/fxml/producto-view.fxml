@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
 <VBox prefHeight="720.0" prefWidth="980.0" spacing="20.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.facturacion.controller.ProductoController">
     <padding>
@@ -78,8 +89,15 @@
         </HBox>
     </VBox>
 
-    <VBox spacing="8.0" styleClass="tabla-card" VBox.vgrow="ALWAYS">
+    <VBox spacing="12.0" styleClass="tabla-card" VBox.vgrow="ALWAYS">
         <Label styleClass="tabla-titulo" text="Catálogo de Productos Registrados" />
+
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <TextField fx:id="txtBuscar" promptText="Buscar por código o nombre..." styleClass="campo-texto" HBox.hgrow="ALWAYS" />
+            <Button onAction="#buscar" styleClass="btn-primary" text="Buscar" />
+            <Button onAction="#verTodos" styleClass="btn-light" text="Ver todos" />
+        </HBox>
+
         <TableView fx:id="tablaProductos" styleClass="tabla-financiera" VBox.vgrow="ALWAYS">
             <columns>
                 <TableColumn fx:id="colId" prefWidth="60.0" text="ID" />
@@ -95,8 +113,7 @@
             </columnResizePolicy>
         </TableView>
     </VBox>
-   <stylesheets>
-      <URL value="@estilos_producto.css" />
-      <URL value="@../styles/producto-style.css" />
-   </stylesheets>
+    <stylesheets>
+        <URL value="@../styles/producto-style.css" />
+    </stylesheets>
 </VBox>
