@@ -36,15 +36,29 @@
         <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="toolbar-acciones">
             <Button onAction="#guardar" styleClass="btn-primary" text="Guardar">
                 <graphic>
-                    <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" smooth="true">
+                    <ImageView fitHeight="18.0" fitWidth="17.0" preserveRatio="true" smooth="true">
                         <image>
                             <Image url="@../icons/agregar.png" />
                         </image>
                     </ImageView>
                 </graphic>
             </Button>
-            <Button onAction="#actualizar" styleClass="btn-secondary" text="Actualizar" />
-            <Button onAction="#limpiar" styleClass="btn-light" text="Limpiar" />
+            <Button onAction="#actualizar" styleClass="btn-secondary" text="Actualizar">
+            <graphic>
+               <ImageView fitHeight="19.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../icons/actualizar.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
+            <Button onAction="#limpiar" styleClass="btn-light" text="Limpiar">
+            <graphic>
+               <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../icons/limpiar.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
             <Button onAction="#eliminar" styleClass="btn-danger" text="Eliminar">
                 <graphic>
                     <ImageView fitHeight="16.0" fitWidth="16.0" preserveRatio="true" smooth="true">

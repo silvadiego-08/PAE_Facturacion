@@ -21,6 +21,9 @@ import ni.edu.uam.facturacion.model.Categoria;
 import ni.edu.uam.facturacion.model.Producto;
 import ni.edu.uam.facturacion.util.SceneManager;
 
+import javafx.stage.FileChooser;
+
+import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.SQLException;
@@ -181,6 +184,19 @@ public class ProductoController {
     }
 
     @FXML
+    private void seleccionarImagen() {
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Seleccionar imagen del producto");
+        chooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Imágenes", "*.png", "*.jpg", "*.jpeg", "*.gif", "*.bmp"));
+
+        File archivo = chooser.showOpenDialog(txtRutaImagen.getScene().getWindow());
+        if (archivo != null) {
+            txtRutaImagen.setText(archivo.getAbsolutePath());
+        }
+    }
+
+    @FXML
     private void buscar() {
         String texto = txtBuscar.getText().trim();
 
@@ -247,7 +263,7 @@ public class ProductoController {
         try {
             precio = new BigDecimal(txtPrecio.getText().trim());
         } catch (NumberFormatException e) {
-            mostrarMensaje(Alert.AlertType.WARNING, "El precio debe ser un número, por ejemplo 25.50");
+            mostrarMensaje(Alert.AlertType.WARNING, "El precio debe ser un número.");
             return null;
         }
 

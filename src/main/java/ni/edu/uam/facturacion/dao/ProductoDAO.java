@@ -69,27 +69,7 @@ public class ProductoDAO {
                 productos.add(mapear(rs));
             }
         }
-
         return productos;
-    }
-
-    public Producto buscar(int id) throws SQLException {
-
-        String sql = SELECT_BASE + " WHERE p.id = ?";
-
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement ps = connection.prepareStatement(sql)) {
-
-            ps.setInt(1, id);
-
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) {
-                    return mapear(rs);
-                }
-            }
-        }
-
-        return null;
     }
 
     public List<Producto> buscar(String texto) throws SQLException {
@@ -111,7 +91,6 @@ public class ProductoDAO {
                 }
             }
         }
-
         return productos;
     }
 

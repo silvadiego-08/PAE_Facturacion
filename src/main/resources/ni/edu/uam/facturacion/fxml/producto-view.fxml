@@ -47,9 +47,12 @@
             <TextField fx:id="txtExistencia" promptText="0" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
             <Label styleClass="campo-label" text="Ruta imagen:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextField fx:id="txtRutaImagen" promptText="assets/imagenes/producto.png" styleClass="campo-texto" GridPane.columnIndex="3" GridPane.rowIndex="2" />
 
             <CheckBox fx:id="chkActivo" selected="true" styleClass="check-custom" text="Producto disponible para venta" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+            <HBox alignment="CENTER_LEFT" spacing="8.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                <TextField fx:id="txtRutaImagen" editable="false" promptText="Sin imagen seleccionada" styleClass="campo-texto" HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnImagen" mnemonicParsing="false" onAction="#seleccionarImagen" styleClass="btn-imagen" text="📁  Examinar..." />
+            </HBox>
         </GridPane>
 
         <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="toolbar-acciones">
